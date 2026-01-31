@@ -1,0 +1,20 @@
+/* Estilo da lupa */
+#lupaZoom {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    pointer-events: none;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+  
+  #lupaZoom img {
+    position: absolute;
+    transform: scale(2.5); /* nível de zoom */
+    transform-origin: top left;
+  }
+  

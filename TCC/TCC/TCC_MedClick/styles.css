@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos do container do carrossel */
+.carrossel {
+    width: 100%;
+    height: 75dvh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+
+/* Estilos para as imagens dentro do carrossel */
+.imagens {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: black;
+    flex-shrink: 0;
+}
+
+/* Botões de navegação */
+.botao {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.anterior {
+    left: 10px;
+}
+
+.proximo {
+    right: 10px;
+}
+
+/* Indicadores de pontinhos */
+.indicadores {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    gap: 5px;
+}
+
+.indicadores span {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicadores .ativo {
+    background-color: white; /* Destaca o ponto ativo */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 1%;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+.nav-button {
+    color: white;
+    background: none; /* Cor do botão */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    color: black;
+    background: #90d442;
+    transform: scale(1.05); /* Efeito de aumento */
+}
+
+.login {
+    cursor: pointer;
+}
+
+.help-section {
+    padding: 20px;
+    text-align: center;
+}
+.cards{
+    background-color: #0B0033; /* Cor do cabeçalho */
+    color: white;
+    width: auto;
+    padding: 10px 50px;  
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-around;
+}
+.card {
+    width: 150px;
+    height: 220px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+   }
+   
+   .card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+.ico{
+    align-items: flex-start;
+   
+}
+/*
+.help-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    background-color: #E8E8E8; /* Cor dos cards 
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+}
+.card-button {
+    color: white;
+    background: #90d442; /* Cor do botão 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-button:hover {
+    background: #00818E;
+    transform: scale(1.05); /* Efeito de aumento 
+}
+*/
+main {
+    margin-top: 30px; /* Espaço médio entre header e main */
+
+}
+
+footer {
+    background-color: #0B0033; /* Cor do cabeçalho */
+    color: white;
+    padding: 20px 50px;
+    text-align: center;  
+}

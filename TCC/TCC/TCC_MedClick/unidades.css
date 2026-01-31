@@ -1,0 +1,112 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f8fb;
+  }
+  
+  /* Container principal da página */
+  .unidades-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Título */
+  .unidades-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Campo de busca */
+  .search-box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .search-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+  }
+  
+  /* Grid de cards responsivo */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Card individual */
+  .card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Conteúdo interno do card */
+  .card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .card-content p {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão de mapa */
+  .map-button {
+    background-color: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .map-button:hover {
+    background-color: #005fa3;
+  }
+  
