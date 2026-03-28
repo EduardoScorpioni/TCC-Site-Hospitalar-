@@ -4,6 +4,7 @@
 <img src="https://img.shields.io/badge/MySQL-5.6-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
 <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
 <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/Python-API-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/status-concluído-brightgreen?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/TCC-2025-blue?style=for-the-badge"/>
 
@@ -45,6 +46,12 @@ O médico possui um painel exclusivo onde define seu horário de funcionamento c
 
 O sistema cobre múltiplas especialidades médicas, previne automaticamente a duplicidade de agendamentos e foi construído com uma interface responsiva, funcional em qualquer dispositivo — do celular ao desktop.
 
+### Geração de PDF via Python
+
+O MedClick possui um módulo de geração de documentos PDF desenvolvido em Python com a biblioteca **ReportLab**. O fluxo é o seguinte: o backend PHP coleta os dados necessários e os serializa em um arquivo JSON temporário contendo informações como nome do paciente, médico, CRM, especialidade, data e tipo de documento. Em seguida, o PHP invoca o script `generate_pdf.py` via linha de comando, passando o caminho desse JSON como argumento. O Python lê o arquivo, processa os dados e gera o PDF formatado na pasta `pdfs/`, devolvendo ao PHP o caminho absoluto do arquivo gerado.
+
+O módulo suporta três tipos de documento, cada um com layout próprio: **comprovante de consulta** (com resumo do atendimento e horário), **atestado médico** (com campos estruturados para afastamento) e **receita médica** (com lista de medicamentos e instruções de uso). A geração pode ocorrer de forma **manual**, acionada pelo usuário dentro do sistema, ou **automática**, disparada pelo próprio PHP em segundo plano sem nenhuma interação adicional.
+
 ---
 
 ## 🛠️ Tecnologias
@@ -53,7 +60,8 @@ O projeto foi desenvolvido com uma stack web clássica, escolhida pela robustez 
 
 | Camada | Tecnologia | Versão |
 |--------|-----------|--------|
-| Backend | PHP | 5.5.8 |
+| Backend Web | PHP | 5.5.8 |
+| API de Documentos | Python + ReportLab | 3.x |
 | Banco de Dados | MySQL | 5.6 |
 | Frontend | HTML5 + CSS3 | — |
 | Interatividade | JavaScript (ES6) + AJAX | — |
@@ -106,6 +114,16 @@ Mova os arquivos para a pasta `www` do EasyPHP e ajuste as credenciais de acesso
 http://localhost/medclick/
 ```
 
+**5. Execute a API Python (geração de PDFs)**
+
+```bash
+cd api-pdf
+pip install -r requirements.txt
+python app.py
+```
+
+A API será iniciada localmente e ficará disponível para receber as requisições do sistema.
+
 ### Credenciais de Teste
 
 | Perfil | E-mail | Senha |
@@ -131,9 +149,9 @@ A escolha do tema foi motivada pela relevância social do problema: dificuldades
 
 ## 👤 Autor
 
-Desenvolvido por **[Igor Marques da Silva e Eduardo Scorpioni]**
+Desenvolvido por **[Seu Nome]**
 
-Curso: [Analise e Desenvolvimento de Sistemas] · Instituição: [Prof. Dr. Antonio Eufrasio de Toledo] · Ano: 2025
+Curso: [Nome do Curso] · Instituição: [Nome da Instituição] · Ano: 2025
 
 ---
 
